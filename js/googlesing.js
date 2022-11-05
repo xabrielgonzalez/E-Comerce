@@ -16,21 +16,3 @@ function signOut() {
     });
 }
 
-/*  function onSignIn(){
-	const googleUser = gapi.auth2.getAuthInstance().currentUser.get();
-	var profile = googleUser.getBasicProfile();
-	localStorage.setItem('ID:' , profile.getId()); // Do not send to your backend! Use an ID token instead.
-	localStorage.setItem('Name:' , profile.getName());
-	localStorage.setItem('Image URL:' , profile.getImageUrl());
-	localStorage.setItem('Email:' , profile.getEmail()); // This is null if the 'email' scope is not present.
-  
-	localStorage.setItem("Acceso", "Ok");
-	
-  
-	var id_token = googleUser.getAuthResponse().id_token;
-	console.log("ID Token: " + id_token);
-	localStorage.setItem("usuario", profile.getName());
-	location.href = "home.html";
-
-  
-  }  */

@@ -1,0 +1,70 @@
+#formulario {
+    padding: 30px 20px;
+}
+
+.formcontrolvalidation {    
+    margin-bottom: 7px;
+    padding-bottom: 20px;
+    position: relative;
+
+    
+}
+
+.formcontrolvalidation label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font:weight 200px
+}
+
+
+.formcontrolvalidation input {
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;    
+}
+.formcontrolvalidation, input:focus {
+    outline: none;
+}
+
+.formcontrolvalidation.ok input {
+    border: 0.1px solid;
+    border-color: #08ffc8;
+}
+.formcontrolvalidation.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+}
+
+
+.formcontrolvalidation p {
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+
+.formcontrolvalidation.falla p {
+    visibility: visible;
+    color:#e74c3c;
+}
+
+#num[type=number]::-webkit-inner-spin-button, 
+#num[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#num[type=number] { -moz-appearance:textfield; }
+
+
+
+.carnum[type=number]::-webkit-inner-spin-button, 
+.carnum[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.carnum[type=number] { -moz-appearance:textfield; }

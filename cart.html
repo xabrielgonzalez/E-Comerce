@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylecart.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</nav>
+<div class="container">
+  <div class="contentbar" style="margin-top: 5%;">
+    <!-- Start row -->
+    <div class="row">
+      <!-- Start col -->
+      <div class="col-md-12 col-lg-12 col-xl-12">
+        <div class="card m-b-30 border-1 mb-4" style="box-shadow: 0px 0px 10px 0px #272b30;">
+          <div class="card-header">
+            <h5 class="card-title text-center fw-bolder fs-3"><i class="fas fa-shopping-cart"> </i> Carrito de compras
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-xl-8">
+                <div class="cart-container border-2" style="border-radius: .25rem;">
+                  <div class="cart-head">
+                    <div class="table-responsive">
+                      <table class="table table-borderless table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Accion</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio un.</th>
+                            <th scope="col" class="text-right">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="cart-body">
+                    <div class="row">
+                      <div class="col-md-4 col-sm-12">
+                        <div class="table-responsive">
+                          <table class="table table-borderless">
+                            <tbody id="resumen">
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-12" id="envios">
+
+                      </div>
+
+                      <form id="formulario" method="">
+                      <div class="col-md-4 col-sm-12 d-flex justify-content-md-center align-items-md-center">
+                       
+                        <button type="button" id="methodP" class="btn btn-dark p-2 mt-3 mb-md-5 mb-3" data-bs-toggle="modal"
+                          data-bs-target="#staticBackdrop">
+                        
+                          Elegir metodo de pago <i class="fas fa-money-bill"></i>
+                        </button>
+                       
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Metodos de pago</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <h4 class=" mb-3"> Elegir metodo de pago:</h4>
+                                <div class="my-3">
+                                
+                                  
+                                    <input type="radio" name="FDePago" class= "metodpay" id="cardpay" value="option1" onclick="methodcard()">
+                                    <label for="" class="form-check-label ms-2">
+                                      Tarjeta</label>
+                                      <br>
+                                     
+ 
+                                      <div class="formcontrolvalidation">
+                                      <label for="">Numero de tarjeta</label>
+                                      <input type="number" name="" id="numbercard" class="carnum formcontrolvalidation" oninput="javascript: 
+                                      if (this.value.length > this.maxLength) 
+                                      this.value = this.value.slice(0, this.maxLength);"
+                                      type = "number"
+                                      maxlength = "16" placeholder="Ingrese un numero de tarjeta" disabled>
+                                      <p></p>
+                                      </div>
+                                      <br>
+
+                                      <div class="formcontrolvalidation">
+                                      <label for="">Vencimiento(MM/YY)</label>
+                                      <input type="month" class="formcontrolvalidation" name="" id="lastdate" disabled>                                  
+                                      <p></p>
+                                      <br>
+                                    </div>
+
+                                      <div class="formcontrolvalidation">
+                                      <label for="">Codigo de Seguridad</label>
+                                      <input type="number" name="" class="carnum formcontrolvalidation" id="numbercvv" oninput="javascript: 
+                                      if (this.value.length > this.maxLength) 
+                                      this.value = this.value.slice(0, this.maxLength);"
+                                      type = "number"
+                                      maxlength = "3" placeholder="Ingrese el codigo de seguridad de la tarjeta" disabled>
+                                      <p></p>
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  
+                                  <div>
+
+                                    <input type="radio" name="FDePago" class="metodpay" id="cardbank" value="option2" onclick="methodbank()">
+                                    <label for="" class="">
+                                      Transferencia bancaria</label>
+                                        <br>
+
+                                      
+                                        <div class="form-tarjeta">
+                                      <label for="">Numero de cuenta</label>
+                                      <input type="number" name="" id="banktran" class="carnum formcontrolvalidation" oninput="javascript: 
+                                      if (this.value.length > this.maxLength) 
+                                      this.value = this.value.slice(0, this.maxLength);"
+                                      type = "number"
+                                      maxlength = "10" placeholder="Ingrese una cuenta bancaria" disabled>
+                                      <p></p>
+                                  </div>
+                                
+                                </div>
+                              
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" id="aceptmetod" class="btn btn-success" 
+                                  aria-label="Close" data-bs-dismiss="modal">Continuar</button>
+                              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-12 d-flex flex-column">
+                        <h3 class="text-center fw-bold text-start text-sm-start text-md-center">Formulario de envio:
+                        </h3>
+                       
+
+                          <div class="formcontrolvalidation">
+                              <label for="usuario">Calle</label>
+                              <input id="usuario" class="street" type="text" maxlength="30" placeholder="Ingrese su calle" disabled>
+                              <p></p>                
+                          </div>
+              
+                          <div class="formcontrolvalidation">
+                              <label for="esqui">Esquina</label>
+                              <input id="esqui" class="street" type="text" placeholder="Ingrese su Esquina" maxlength="30" disabled>
+                              <p></p>                
+                          </div>
+
+                          <div class="formcontrolvalidation">
+                            <label for="num">Numero de puerta</label>
+                            <input id="num" type="number" oninput="javascript: 
+                            if (this.value.length > this.maxLength) 
+                            this.value = this.value.slice(0, this.maxLength);"
+                            type = "number"
+                            maxlength = "4" placeholder="Ingrese su numero de puerta" class="street" disabled>
+                            <p></p>                
+                        </div>
+              
+                        
+            
+                        <div class="cart-footer">
+                          <button class="btn btn-success my-1"
+                          id="acceptcart">Comprar <i
+                              class="fas fa-arrow-right"></i> </button>
+                          <a href="products.html" type="button" class="btn btn-primary my-1"> Seguir comprando <i
+                              class="fas fa-shopping-basket"></i></a>
+
+                             <p id="choosemethod"></p>
+                        </div>
+                      </form>
+                        <div id="formcont"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="js/cart.js"></script>
+  
+</body>
+
+</html>

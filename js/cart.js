@@ -38,7 +38,6 @@ function methodcard() {
   }
 }
 
-
 function methodbank() {
   if (cardbank.checked) {
     nume.disabled = false
@@ -51,6 +50,8 @@ function methodbank() {
 
   }
 }
+
+
 
 window.addEventListener('load', () => {
   const form = document.querySelector('#formulario')
@@ -76,11 +77,11 @@ window.addEventListener('load', () => {
 
   let alerta = document.getElementById("formcont")
 
+
   form.addEventListener('submit', (e) => {
     e.preventDefault()
     validaCampos()
   })
-
   const validaCampos = () => {
 
     const calleValor = calle.value.trim()
@@ -175,9 +176,7 @@ window.addEventListener('load', () => {
       validaOk(calle)
     }
 
-
     if (!esquinaValor) {
-
       validaFalla(esqui, 'Campo vacío')
     } else if (esquinaValor.length < 5) {
       validaFalla(esqui, 'esquina no valida')

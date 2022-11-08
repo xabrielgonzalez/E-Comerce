@@ -1,8 +1,4 @@
-#formulario {
-    padding: 30px 20px;
-}
-
-.formcontrolvalidation {    
+.formcontrolvalidationuse {    
     margin-bottom: 7px;
     padding-bottom: 20px;
     position: relative;
@@ -10,29 +6,29 @@
     
 }
 
-.formcontrolvalidation label {
+.formcontrolvalidationuse label {
     display: inline-block;
     margin-bottom: 7px;
     font:weight 200px
 }
 
 
-.formcontrolvalidation input {
+.formcontrolvalidationuse input {
     display: block;
     font-family: inherit;
     font-size: 16px;
     padding: 12px;
     width: 100%;    
 }
-.formcontrolvalidation, input:focus {
+.formcontrolvalidationuse, input:focus {
     outline: none;
 }
 
-.formcontrolvalidation.ok input {
+.formcontrolvalidationuse.ok input {
     border: 0.1px solid;
     border-color: #08ffc8;
 }
-.formcontrolvalidation.falla input {
+.formcontrolvalidationuse.falla input {
     border: 0.1px solid;
     border-color: #fe5f55;
 }

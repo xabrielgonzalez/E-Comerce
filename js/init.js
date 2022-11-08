@@ -52,13 +52,14 @@ let getJSONData = function(url){
     else {
       
       let user = JSON.parse(localStorage.getItem("mai"));
+  
       let html = document.createElement("a");
       html.innerHTML += `<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav justify-content-between">
         <li class="nav-item dropdown">
         
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        
+
           ${user.mail}
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">

@@ -1,22 +1,26 @@
 let datos = {}
 let usuario =JSON.parse(localStorage.getItem("mai"))
 
-function setDatos(){
+function setDatos(){   
             datos.nombre = document.getElementById("nombre").value;
             datos.apellido = document.getElementById("apellido").value;
             datos.segundonombre = document.getElementById("segundonombre").value;
-            datos.segundoapellido=document.getElementById("segundoapellido").value
+            datos.segundoapellido=document.getElementById("segundoapellido").value;
             datos.contacto = document.getElementById("contacto").value;
             datos.foto = document.getElementById("profilePhoto").src;
-            usuario.mail=document.getElementById("email").value
+            usuario.mail=document.getElementById("email").value; 
             localStorage.setItem("datosUsuario", JSON.stringify(datos))
             localStorage.setItem("mai", JSON.stringify(usuario));
             location.reload()
+
+            
       }
+      
 
 function getDatos() {
       datos = JSON.parse(localStorage.getItem("datosUsuario"))
       usuario=JSON.parse(localStorage.getItem("mai"))
+
              document.getElementById("nombre").value = datos.nombre;
              document.getElementById("apellido").value = datos.apellido;
              document.getElementById("segundonombre").value = datos.segundonombre;
@@ -26,6 +30,7 @@ function getDatos() {
              document.getElementById("email").value = usuario.mail      
 
 }
+
 function newPhoto() {
       let preview = document.getElementById('profilePhoto');
       let file    = document.getElementById('inputPhoto').files[0];
@@ -34,7 +39,6 @@ function newPhoto() {
       reader.onloadend = function () {
         preview.src = reader.result;
       }
-    
       if (file) {
         reader.readAsDataURL(file);
       } else {
@@ -43,7 +47,8 @@ function newPhoto() {
     }
     
 document.addEventListener("DOMContentLoaded", function (e) {
-      if (localStorage.datosUsuario === undefined) {
+     
+      if (localStorage.datosUsuario===undefined) {
             setDatos();
       }else {getDatos()};
       

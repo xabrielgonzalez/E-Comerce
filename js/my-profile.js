@@ -1,6 +1,6 @@
 let datos = {}
 let usuario =JSON.parse(localStorage.getItem("mai"))
-
+let aviso= document.getElementById("formprofile")
 function setDatos(){   
             datos.nombre = document.getElementById("nombre").value;
             datos.apellido = document.getElementById("apellido").value;
@@ -8,7 +8,6 @@ function setDatos(){
             datos.segundoapellido=document.getElementById("segundoapellido").value;
             datos.contacto = document.getElementById("contacto").value;
             datos.foto = document.getElementById("profilePhoto").src;
-            usuario.mail=document.getElementById("email").value; 
             localStorage.setItem("datosUsuario", JSON.stringify(datos))
             localStorage.setItem("mai", JSON.stringify(usuario));
             location.reload()
@@ -20,7 +19,6 @@ function setDatos(){
 function getDatos() {
       datos = JSON.parse(localStorage.getItem("datosUsuario"))
       usuario=JSON.parse(localStorage.getItem("mai"))
-
              document.getElementById("nombre").value = datos.nombre;
              document.getElementById("apellido").value = datos.apellido;
              document.getElementById("segundonombre").value = datos.segundonombre;
@@ -50,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
      
       if (localStorage.datosUsuario===undefined) {
             setDatos();
+          
       }else {getDatos()};
       
 });

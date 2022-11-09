@@ -1,19 +1,33 @@
 let datos = {}
 let usuario =JSON.parse(localStorage.getItem("mai"))
 let aviso= document.getElementById("formprofile")
+
+
+document.getElementById("email").value=usuario.mail
+
 function setDatos(){   
+      if(document.getElementById("nombre").value==="" || document.getElementById("apellido").value===""||document.getElementById("email").value===""){
+            aviso.innerHTML = `  
+            <div class="alert alert-warning alert-dismissible fade show alertaReset mt-2" id="danger" style="position: static;" role="warning">
+              <strong>Cuidado!</strong>Debe completar su perfil con Nombre y Apellido.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>  
+            </div>`
+      }else{
             datos.nombre = document.getElementById("nombre").value;
             datos.apellido = document.getElementById("apellido").value;
             datos.segundonombre = document.getElementById("segundonombre").value;
             datos.segundoapellido=document.getElementById("segundoapellido").value;
             datos.contacto = document.getElementById("contacto").value;
-            datos.foto = document.getElementById("profilePhoto").src;
+            datos.foto = document.getElementById("profilePhoto").src
+            usuario.mail=document.getElementById("email").value
             localStorage.setItem("datosUsuario", JSON.stringify(datos))
             localStorage.setItem("mai", JSON.stringify(usuario));
             location.reload()
-
-            
+ 
       }
+                 }
+            
+      
       
 
 function getDatos() {

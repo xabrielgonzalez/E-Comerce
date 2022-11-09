@@ -8,8 +8,8 @@ document.getElementById("email").value=usuario.mail
 function setDatos(){   
       if(document.getElementById("nombre").value==="" || document.getElementById("apellido").value===""||document.getElementById("email").value===""){
             aviso.innerHTML = `  
-            <div class="alert alert-warning alert-dismissible fade show alertaReset mt-2" id="danger" style="position: static;" role="warning">
-              <strong>Cuidado!</strong>Debe completar su perfil con Nombre y Apellido.
+            <div class="alert alert-info alert-dismissible fade show alertaReset mt-2" id="danger" style="position: static;" role="info">
+              Debe completar su perfil con Nombre y Apellido.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>  
             </div>`
       }else{

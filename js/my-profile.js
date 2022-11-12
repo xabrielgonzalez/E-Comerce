@@ -1,15 +1,13 @@
 let datos = {}
 let usuario =JSON.parse(localStorage.getItem("mai"))
 let aviso= document.getElementById("formprofile")
-
-
 document.getElementById("email").value=usuario.mail
 
 function setDatos(){   
       if(document.getElementById("nombre").value==="" || document.getElementById("apellido").value===""||document.getElementById("email").value===""){
             aviso.innerHTML = `  
             <div class="alert alert-info alert-dismissible fade show alertaReset mt-2" id="danger" style="position: static;" role="info">
-              Debe completar su perfil con Nombre y Apellido.
+              Debe completar su perfil con Nombre y Apellido y un Email en caso de que quiera cambiarlo.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>  
             </div>`
       }else{
@@ -23,12 +21,8 @@ function setDatos(){
             localStorage.setItem("datosUsuario", JSON.stringify(datos))
             localStorage.setItem("mai", JSON.stringify(usuario));
             location.reload()
- 
       }
                  }
-            
-      
-      
 
 function getDatos() {
       datos = JSON.parse(localStorage.getItem("datosUsuario"))
@@ -42,6 +36,7 @@ function getDatos() {
              document.getElementById("email").value = usuario.mail      
 
 }
+
 
 function newPhoto() {
       let preview = document.getElementById('profilePhoto');

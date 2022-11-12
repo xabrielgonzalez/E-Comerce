@@ -52,7 +52,7 @@ let getJSONData = function(url){
     else {
       
       let user = JSON.parse(localStorage.getItem("mai"));
-  
+      
       let html = document.createElement("a");
       html.innerHTML += `<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav justify-content-between">
